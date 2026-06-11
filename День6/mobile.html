@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Кибербезопасность — мобильная версия</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Дополнительные мобильные уточнения */
+        .container {
+            padding: 12px;
+        }
+        .section {
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 22px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        .form-card {
+            padding: 18px;
+        }
+        button {
+            padding: 12px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="logo">🛡️ Центр кибербезопасности</div>
+    </div>
+
+    <h1 class="main-title">Профилактика интернет-мошенничества и киберугроз</h1>
+
+    <div class="section">
+        <h2>Что такое интернет-мошенничество и как предотвратить его?</h2>
+        <p>Интернет-мошенничество — распространённая форма противоправной деятельности, где злоумышленники пытаются получить доступ к конфиденциальной информации или деньгам. Для защиты используйте сложные пароли, двухфакторную аутентификацию и не доверяйте подозрительным ссылкам.</p>
+    </div>
+
+    <div class="section">
+        <h2>Что такое киберугрозы?</h2>
+        <p>Киберугрозы — это атаки на информацию, компьютеры, сети и личные данные через интернет. Включают вирусы, фишинг, взлом аккаунтов.</p>
+    </div>
+
+    <div class="section">
+        <h2>Что такое кибербезопасность?</h2>
+        <p>Это защита от несанкционированного доступа, вредоносных программ, сайтов, ссылок и сообщений. Надёжная кибербезопасность сохраняет ваши данные в безопасности.</p>
+    </div>
+
+    <div class="section">
+        <h2>Как не стать жертвой мошенников?</h2>
+        <p>Никогда не сообщайте коды из СМС, проверяйте адрес сайта, не переходите по ссылкам из спам-рассылок и используйте антивирус.</p>
+    </div>
+
+    <div class="form-card">
+        <h3>Свяжитесь с нами</h3>
+        <form id="mobileContactForm">
+            <div class="form-group">
+                <label>Фамилия:</label>
+                <input type="text" name="surname" placeholder="Фамилия" required>
+            </div>
+            <div class="form-group">
+                <label>Имя:</label>
+                <input type="text" name="name" placeholder="Имя" required>
+            </div>
+            <div class="form-group">
+                <label>Телефон:</label>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
+        <div id="mobileFormMessage" class="form-message"></div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 Центр кибербезопасности. Все права защищены.</p>
+        <p>Политика конфиденциальности | Согласие на обработку персональных данных</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('mobileContactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const msg = document.getElementById('mobileFormMessage');
+        msg.textContent = '✅ Заявка отправлена! Мы свяжемся с вами.';
+        msg.style.color = '#2F5AE5';
+        this.reset();
+        setTimeout(() => { msg.textContent = ''; }, 4000);
+    });
+</script>
+
+</body>
+</html>
