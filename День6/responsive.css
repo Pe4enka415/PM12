@@ -1,0 +1,103 @@
+/* ========== ПЛАНШЕТЫ (ширина до 1024px) ========== */
+@media (max-width: 1024px) {
+    .hero-grid {
+        gap: 30px;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .advantages-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    .course-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* ========== ТЕЛЕФОНЫ (ширина до 768px) ========== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 0;
+    }
+    .hero-grid {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 1.6rem;
+    }
+    .hero-description {
+        font-size: 1rem;
+    }
+    .hero-image img {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .advantages h2 {
+        font-size: 1.8rem;
+    }
+    .adv-item {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    .courses-grid {
+        flex-direction: column;
+    }
+    .course-card {
+        width: 100%;
+    }
+
+    /* форма обратной связи */
+    .feedback-grid {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    .feedback-labels {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 15px;
+        justify-content: space-between;
+    }
+    .feedback-labels label {
+        width: 22%;
+        font-size: 1rem;
+    }
+    .feedback-inputs {
+        width: 100%;
+    }
+    .footer-links {
+        font-size: 0.85rem;
+        word-break: break-word;
+    }
+    .container {
+        padding: 0 16px;
+    }
+
+    /* видео */
+    .video-lesson {
+        padding: 50px 0;
+    }
+    .section-title-light {
+        font-size: 1.5rem;
+    }
+}
+
+/* для очень маленьких телефонов (<= 480px) */
+@media (max-width: 480px) {
+    .feedback-labels label {
+        width: 100%;
+        margin-bottom: -5px;
+    }
+    .feedback-labels {
+        flex-direction: column;
+    }
+    .submit-btn {
+        padding: 12px;
+    }
+    .hero-text h1 {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Обратная связь | Кибербезопасность</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">CyberSafe</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="lessons.html">Видеоурок</a></li>
+                <li><a href="contacts.html" class="active">Обратная связь</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="feedback">
+        <div class="container feedback-block">
+            <h2 class="feedback-title">Обратная связь</h2>
+            <div class="feedback-form">
+                <div class="form-row">
+                    <label for="surname">Фамилия</label>
+                    <input type="text" id="surname" name="surname" placeholder="Иванов">
+                </div>
+                <div class="form-row">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" placeholder="Иван">
+                </div>
+                <div class="form-row">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (900) 123-45-67">
+                </div>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="ivan@example.com">
+                </div>
+                <div class="form-row button-row">
+                    <button type="button" id="sendBtn" class="submit-btn">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Центр кибербезопасности. Все права защищены.</p>
+            <p class="footer-links">
+                <a href="#">Политика конфиденциальности</a> | 
+                <a href="#">Согласие на обработку персональных данных</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        document.getElementById('sendBtn')?.addEventListener('click', function() {
+            const surname = document.getElementById('surname')?.value.trim() || '';
+            const name = document.getElementById('name')?.value.trim() || '';
+            const phone = document.getElementById('phone')?.value.trim() || '';
+            const email = document.getElementById('email')?.value.trim() || '';
+            if (!surname || !name || !phone || !email) {
+                alert('Пожалуйста, заполните все поля');
+                return;
+            }
+            alert(`Спасибо, ${name} ${surname}!\nМы свяжемся с вами по телефону ${phone} или email ${email}`);
+        });
+    </script>
+
+</body>
+</html>
